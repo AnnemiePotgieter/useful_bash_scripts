@@ -3,10 +3,10 @@
 # $1 input is last part of path to bsp version e.g. /interim/deb/
 # $2 input is PCI address e.g. 0000:07:00.0
 # $3 input is fw file name e.g. nic_AMDA0097-0001_2x40.nffw
-# $4 input is bsp version e.g. 22.10~00111.main.282e56a-0.bionic_amd64.deb
+# $4 input is bsp version e.g. 22.10~00111.main.282e56a-0
 
 # install BSP version
-apt-get install -y /mnt/cloud/binaries/nfp-bsp/$1nfp-bsp*$4 --allow-downgrades
+apt-get install -y /mnt/cloud/binaries/nfp-bsp/$1nfp-bsp*$4.bionic_amd64.deb --allow-downgrades
 
 # ensure interfaces are visible by reloading the driver
 rmmod nfp
